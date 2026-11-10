@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SG Topup bazar</title>
+<style>
+body {
+  margin: 0;
+  background: #101020;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+header {
+  background: #211b42;
+  padding: 25px;
+  color: #50dfff;
+}
+main {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 15px;
+}
+.card {
+  background: #252344;
+  padding: 22px;
+  margin: 15px 0;
+  border-radius: 15px;
+}
+select, input, button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+button {
+  background: #00c8ee;
+  font-weight: bold;
+}
+footer {
+  padding: 20px;
+  color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>💎 SG TOPUP BAZAR</h1>
+<p>Your Gaming Top-Up Store</p>
+</header>
+
+<main>
+<div class="card">
+<h2>Welcome to SG Topup bazar</h2>
+<p>Choose Your Diamond Package</p>
+</div>
+
+<div class="card">
+<h2>💎 Diamond Packages</h2>
+
+<select id="pack">
+<option>25 Diamonds</option>
+<option>50 Diamonds</option>
+<option>115 Diamonds</option>
+<option>240 Diamonds</option>
+<option>610 Diamonds</option>
+</select>
+
+<input id="uid" placeholder="Enter Player UID">
+
+<button onclick="order()">Order Now</button>
+
+<p id="msg"></p>
+</div>
+</main>
+
+<footer>
+<p>© 2026 SG Topup bazar</p>
+<p>Demo Website - Not affiliated with Garena</p>
+</footer>
+
+<script>
+function order() {
+let uid = document.getElementById("uid").value.trim();
+let pack = document.getElementById("pack").value;
+
+if (!uid) {
+document.getElementById("msg").innerText =
+"Please enter your UID";
+return;
+}
+
+document.getElementById("msg").innerText =
+"Demo only: " + pack + ". No top-up made.";
+}
+</script>
+
+</body>
+  </html>
